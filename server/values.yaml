@@ -250,12 +250,12 @@ resources:
   # choice for the user. This also increases chances charts run on environments with little
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
   # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
-  limits: {}
-  #   cpu: 100m
-  #   memory: 128Mi
-  requests: {}
-  #   cpu: 100m
-  #   memory: 128Mi
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
 
 ## NGINX containers' liveness and readiness probes.
 ## ref: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#container-probes
@@ -287,10 +287,10 @@ customReadinessProbe: {}
 ##
 autoscaling:
   enabled: false
-  # minReplicas: 1
-  # maxReplicas: 10
-  # targetCPU: 50
-  # targetMemory: 50
+#  minReplicas: 1
+#  maxReplicas: 3
+#  targetCPU: 50
+#  targetMemory: 50
 
 ## Array to add extra volumes (evaluated as a template)
 ##
@@ -656,7 +656,7 @@ healthIngress:
 ## Prometheus Exporter / Metrics
 ##
 metrics:
-  enabled: false
+  enabled: true
 
   ## Bitnami NGINX Prometheus Exporter image
   ## ref: https://hub.docker.com/r/bitnami/nginx-exporter/tags/
