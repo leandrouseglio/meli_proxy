@@ -20,4 +20,7 @@ echo "\n"
 echo "Setting up server nginx"
 helm3 install mproxy -f values.yaml bitnami/nginx -n mproxy
 
+echo "\n"
+echo "Setting up hpa"
+kubectl create -f hpa.yaml
 exit 0
