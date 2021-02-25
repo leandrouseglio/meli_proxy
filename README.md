@@ -3,8 +3,8 @@
 ## prerequisitos
 - `Terraform` "~> 0.14"
 - `awscli`
-- `kubectl`
-- `helm`
+- `kubectl` "Kubernetes 1.12+"
+- `helm` "3.1.0"
 
 ```
 $ aws configure
@@ -14,7 +14,7 @@ Default region name [None]: YOUR_AWS_REGION
 Default output format [None]: json
 ```
 
-## crear infraestructura using terraform - eks 
+## crear infraestructura using terraform - eks
 ```
 $ terraform init
 
@@ -33,8 +33,7 @@ $ helm3 install metric-server bitnami/metrics-server --set apiService.create=tru
 ```
 
 ### Referencias
-- https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started
-- https://learn.hashicorp.com/tutorials/terraform/eks
+- https://learn.hashicorp.com/terraform
 - https://helm.sh/docs/intro/install/
 - https://artifacthub.io/packages/helm/bitnami/nginx
 - https://artifacthub.io/packages/helm/bitnami/kube-state-metrics
