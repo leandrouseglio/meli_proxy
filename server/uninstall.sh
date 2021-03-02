@@ -2,12 +2,12 @@
 
 echo "\n"
 echo "Uninstall server metrics"
-helm3 uninstall kube-state-metrics -n metrics
-helm3 uninstall metric-server -n metrics
+helm uninstall kube-state-metrics -n metrics
+helm uninstall metric-server -n metrics
 
 echo "\n"
 echo "Uninstall server nginx"
-helm3 uninstall mproxy -n mproxy
+helm uninstall mproxy -n mproxy
 
 echo "\n"
 echo "Delete configmaps"
